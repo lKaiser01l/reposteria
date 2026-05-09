@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(/images/imagensesion.jpg);
+    background-image: url(../assets/imagensesion.jpg);
     background-size: cover;
 }
 

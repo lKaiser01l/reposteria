@@ -2,6 +2,14 @@
 
 import Nav from '../components/nav.astro'
 import Footer from '../components/footer.astro'
+
+import { Image } from 'astro:assets';
+import Contacto from '../assets/contact-img.jpg';
+import producto_1 from '../assets/img-1.jpg';
+import producto_2 from '../assets/img-2.jpg';
+import producto_3 from '../assets/img-3.jpg';
+import producto_4 from '../assets/img-4.jpg';
+import producto_5 from '../assets/img-5.jpg';
 ---	
 
 <html lang="en">
@@ -129,7 +137,7 @@ import Footer from '../components/footer.astro'
 				<!-- Ícono 1 -->
 				<div class="col-md-6 col-lg-3">
 				<div class="d-flex align-items-center p-3 bg-white border rounded shadow-sm h-100">
-					<img src="/src/images/icon-1.jpg" alt="Delivery Gratis" class="me-3" style="height: 50px" />
+					<img src="/src/assets/icon-1.jpg" alt="Delivery Gratis" class="me-3" style="height: 50px" />
 					<div>
 					<h6 class="mb-1 text-capitalize fw-semibold">
 						Delivery Gratis
@@ -272,7 +280,7 @@ import Footer from '../components/footer.astro'
 				<div class="col-md-6 col-lg-3">
 				<div class="card position-relative h-100">
 					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-17%</span>
-					<img src="/src/images/img-5.jpg" class="card-img-top" alt="galletaMantequilla" />
+					<img src="../assets/img-5.jpg" class="card-img-top" alt="galletaMantequilla" />
 					<div class="card-body d-flex flex-column">
 					<h5 class="card-title text-capitalize">
 						Galletas de Mantequilla
@@ -467,7 +475,7 @@ import Footer from '../components/footer.astro'
 
 				<!-- Imagen -->
 				<div class="col-md-6 text-center">
-				<img src="/src/images/contact-img.jpg" alt="Ilustración contacto" class="img-fluid" style="max-height: 350px" />
+				<img src="/src/assets/contact-img.jpg" alt="Ilustración contacto" class="img-fluid" style="max-height: 350px" />
 				</div>
 			</div>
 			</div>
