@@ -28,26 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
            const productosOcultos = document.getElementById('productosOcultos');
            productosOcultos.innerHTML = ''; // Limpiar campos anteriores
 
-           cart.forEach((item, index) => {
-               const inputNombre = document.createElement('input');
-               inputNombre.type = 'hidden';
-               inputNombre.name = 'producto';
-               inputNombre.value = item.name;
-               productosOcultos.appendChild(inputNombre);
-
-               const inputCantidad = document.createElement('input');
-               inputCantidad.type = 'hidden';
-               inputCantidad.name = 'cantidad';
-               inputCantidad.value = item.quantity;
-               productosOcultos.appendChild(inputCantidad);
-
-               const inputPrecio = document.createElement('input');
-               inputPrecio.type = 'hidden';
-               inputPrecio.name = 'precio';
-               inputPrecio.value = item.price;
-               productosOcultos.appendChild(inputPrecio);
-           });
-
            // Limpiar localStorage antes de enviar
            localStorage.removeItem('cart');
            localStorage.removeItem('cartCount');
