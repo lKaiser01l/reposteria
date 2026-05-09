@@ -1,6 +1,15 @@
 ---
+import '../styles/infoweb.css';
+
 import Nav from '../components/nav.astro';
 import Footer from '../components/footer.astro';
+
+
+
+import { Image } from 'astro:assets';
+import nosotros1 from '../assets/nosotros1.jpg';
+import nosotros2 from '../assets/nosotros2.jpg';
+import nosotros3 from '../assets/nosotros3.jpg';
 ---
 
 <!DOCTYPE html>
@@ -30,7 +39,7 @@ import Footer from '../components/footer.astro';
                 <p>Somos una empresa dedicada a la creación y venta de una amplia variedad de productos de repostería artesanal. Estos productos incluyen pasteles, tartas, galletas, cupcakes, y otros dulces preparados con ingredientes frescos y de alta calidad. La empresa se esfuerza por mantener un nivel de excelencia en sus productos y servicios, y se destaca por su atención al cliente, creatividad en la elaboración de postres.</p>
             </div>
             <div class="info-img">
-                <img src="/src/images/nosotros1.jpg" alt="Historia de la Empresa">
+                <Image src={nosotros1} alt="Historia de la Empresa" class="img-fluid" />
             </div>
         </div>
     </section>
@@ -42,7 +51,7 @@ import Footer from '../components/footer.astro';
                 <p>Ofrecer a los clientes postres de calidad, elaborados con ingredientes frescos y con un toque único, para hacer de cada ocasión especial un recuerdo delicioso.</p>
             </div>
             <div class="info-img">
-                <img src="/src/images/nosotros2.jpg" alt="Visión de la Empresa">
+                <Image src={nosotros2} alt="Visión de la Empresa" class="img-fluid" />
             </div>
         </div>
     </section>
@@ -54,7 +63,7 @@ import Footer from '../components/footer.astro';
                 <p>Ser reconocidos como la mejor repostería artesanal, innovando constantemente en nuestros productos y servicios, y manteniendo un compromiso firme con la calidad y la satisfacción del cliente.</p>
             </div>
             <div class="info-img">
-                <img src="/src/images/nosotros3.jpg" alt="Misión de la Empresa">
+                <Image src={nosotros3} alt="Misión de la Empresa" class="img-fluid" />
             </div>
         </div>
     </section>
