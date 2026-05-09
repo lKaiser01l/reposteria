@@ -1,5 +1,10 @@
+---
+import { Image } from 'astro:assets';
+import producto_3 from '../assets/img-3.png';
+---
+
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,7 +34,7 @@
         text-align: center;
       }
 
-      .producto-img {
+      .Image {
         border-radius: 10px;
         max-height: 500px;
         width: 100%;
@@ -74,7 +79,7 @@
         >
           <!-- Imagen -->
           <div class="img-container">
-            <img src="/src/images/img-3.jpg" alt="Cupcake" class="producto-img" />
+            <Image src={producto_3} alt="Cupcake" class="producto-img" height={400}/>
           </div>
 
           <!-- Información -->

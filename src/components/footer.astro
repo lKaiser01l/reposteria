@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from '../assets/delicias4.png';
+
+import Libro from '../assets/libro_reclamaciones.png';
 ---
 
 <footer class="bg-white text-dark pt-5">
@@ -124,8 +126,8 @@ import Logo from '../assets/delicias4.png';
           <span class="ms-2">Reposteriadelicias01@gmail.com</span>
         </div>
         <div class="mt-3">
-          <img
-            src="../assets/libro_reclamaciones.png"
+          <Image
+            src={Libro}
             class="img-fluid"
             alt="Libro de Reclamaciones"
           />
