@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Donas - Información</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .info-box {
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        padding: 20px;
+      }
+
+      .producto-img {
+        border-radius: 10px;
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .badge-price {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+      }
+
+      .highlight {
+        color: #e83e8c;
+      }
+
+      .btn-volver {
+        background-color: #e83e8c;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+
+      .btn-volver:hover {
+        background-color: #d63384;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h2 class="text-center mb-5 bg-light p-3 rounded-3 fw-bold">
+        Información Del Producto - <span class="text-dark">Donas</span>
+      </h2>
+
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-10 info-box d-flex flex-column flex-md-row gap-4 align-items-center"
+        >
+          <!-- Imagen -->
+          <div class="col-md-6">
+            <img
+              src="/src/images/img-4.jpg"
+              alt="Donas"
+              class="img-fluid producto-img"
+            />
+          </div>
+
+          <!-- Información -->
+          <div class="col-md-6">
+            <h4 class="mb-3">
+              Ingredientes de las <span class="highlight">Donas</span>
+            </h4>
+            <p class="mb-2">
+              <strong>Calificación:</strong>
+              <span class="text-warning">★★★★☆</span>
+              <span class="text-muted">4.5/5</span>
+            </p>
+            <ul class="mb-3">
+              <li>2 tazas de harina de trigo</li>
+              <li>3/4 taza de azúcar</li>
+              <li>1/2 taza de leche tibia</li>
+              <li>2 huevos</li>
+              <li>1 cucharada de mantequilla derretida</li>
+              <li>1 cucharadita de levadura</li>
+              <li>Glaseado o azúcar para decorar</li>
+            </ul>
+            <div class="d-flex align-items-center gap-3 mt-4">
+              <p class="fw-bold fs-5 mb-0">
+                Precio:
+                <span class="badge bg-danger text-white badge-price"
+                  >S/ 12.00</span
+                >
+              </p>
+              <a href="/#productos" class="btn-volver" title="Volver al inicio">
+                <i class="bi bi-house-fill me-2"></i>Volver
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

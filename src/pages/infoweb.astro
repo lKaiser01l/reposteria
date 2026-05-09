@@ -1,0 +1,75 @@
+---
+import Nav from '../components/nav.astro';
+import Footer from '../components/footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de la Empresa - Repostería Delicias</title>
+    <!--boostrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--boostrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/src/styles/infoweb.css">
+</head>
+
+<body>
+    <div>
+        <Nav />
+    </div>
+
+
+    <section id="historia" class="info-section">
+        <div class="content">
+            <div class="info-text">
+                <h2 class="heading"><span>¿Quienes</span> somos?</h2>
+                <p>Somos una empresa dedicada a la creación y venta de una amplia variedad de productos de repostería artesanal. Estos productos incluyen pasteles, tartas, galletas, cupcakes, y otros dulces preparados con ingredientes frescos y de alta calidad. La empresa se esfuerza por mantener un nivel de excelencia en sus productos y servicios, y se destaca por su atención al cliente, creatividad en la elaboración de postres.</p>
+            </div>
+            <div class="info-img">
+                <img src="/src/images/nosotros1.jpg" alt="Historia de la Empresa">
+            </div>
+        </div>
+    </section>
+<!--Seccion2-->
+    <section id="vision" class="info-section">
+        <div class="content">
+            <div class="info-text">
+                <h2 class="heading"><span>Visión</span> de la Empresa</h2>
+                <p>Ofrecer a los clientes postres de calidad, elaborados con ingredientes frescos y con un toque único, para hacer de cada ocasión especial un recuerdo delicioso.</p>
+            </div>
+            <div class="info-img">
+                <img src="/src/images/nosotros2.jpg" alt="Visión de la Empresa">
+            </div>
+        </div>
+    </section>
+<!--Seccion3-->
+    <section id="mision" class="info-section">
+        <div class="content">
+            <div class="info-text">
+                <h2 class="heading"><span>Misión</span> de la Empresa</h2>
+                <p>Ser reconocidos como la mejor repostería artesanal, innovando constantemente en nuestros productos y servicios, y manteniendo un compromiso firme con la calidad y la satisfacción del cliente.</p>
+            </div>
+            <div class="info-img">
+                <img src="/src/images/nosotros3.jpg" alt="Misión de la Empresa">
+            </div>
+        </div>
+    </section>
+    
+    <!--Footer-->
+   <Footer />
+
+
+
+    <!--js boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <!--js personalizado-->
+    <script src="/src/js/cart.js"></script>
+
+</body>
+
+</html>

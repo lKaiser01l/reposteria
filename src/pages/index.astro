@@ -1,0 +1,490 @@
+---
+
+import Nav from '../components/nav.astro'
+import Footer from '../components/footer.astro'
+---	
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pagina Web de Reposteria Delicias</title>
+
+		<!--bootstrap icons-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<!--bootstrap css-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+			crossorigin="anonymous">
+
+		<link href="/src/styles/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!--nav-->
+		<div>
+			<Nav />
+		</div>
+		
+		<section class="hero-carousel" id="inicio">
+			<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+				<img src="https://www.ceac.es/sites/default/files/2019-08/ceac-27-03-2019-reposteria.jpg.webp"
+					class="d-block w-100" alt="Fondo 1" />
+				</div>
+				<div class="carousel-item">
+				<img src="https://www.levapan.com/wp-content/uploads/2024/04/10_productos_pasteleria.jpeg"
+					class="d-block w-100" alt="Fondo 2" />
+				</div>
+				<div class="carousel-item">
+				<img src="https://proingra.com/wp-content/uploads/2021/10/21-OCT-BRAHMAN_3.jpg" class="d-block w-100"
+					alt="Fondo 3" />
+				</div>
+			</div>
+
+			</div>
+			<!-- TEXTO CENTRADO ENCIMA DEL CARRUSEL -->
+			<div class="carousel-overlay">
+			<div class="carousel-text text-center">
+				<h1 class="display-1 fw-bold text-light shadow-text">POSTRES</h1>
+				<h2 class="text-warning fw-bold fs-2">
+				Deliciosos &amp;
+				</h2>
+				<h2 class="text-warning fw-bold fs-2 mb-4">
+				Creativos
+				</h2>
+				<p class="lead text-light shadow-text fs-5 px-4">
+				Porque cada comida merece un final dulce y delicioso.<br />
+				Descubre nuestra selección de postres que deleitarán tus sentidos.
+				</p>
+				<a href="#productos" class="btn btn-warning btn-lg mt-3 shadow">Comprar Ahora</a>
+			</div> <!-- Cierra carousel-text -->
+			</div> <!-- Cierra carousel-overlay -->
+		</section>
+
+
+		<!-- Sección Nosotros -->
+		<section class="py-5 bg-white" id="nosotros">
+			<div class="container">
+			<h1 class="text-center mb-5 heading">
+				<!--fondo-->
+				<div class="seccion-titulo text-center heading bg-opacity-10 bg-danger text-center py-2">
+				<span class="highlight">Nosotros</span>
+				</div>
+			</h1>
+
+			<!-- Video con texto superpuesto -->
+			<!--Columnas-->
+			<div class="row align-items-center g-4">
+				<div class="col-md-6">
+				<!--video -->
+				<div class="position-relative shadow rounded overflow-hidden">
+					<video autoplay muted loop class="w-100" style="height: 300px; object-fit: cover">
+					<source src="/src/images/vid-1.mp4" type="video/mp4" />
+					Tu navegador no soporta el video.
+					</video>
+					<!--texto superpuesto-->
+					<div class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-75 text-center py-2">
+					<h4 class="mb-0 text-light">Los Mejores Postres</h4>
+					</div>
+				</div>
+				</div>
+
+				<!-- Contenido de texto -->
+				<div class="col-md-6">
+				<h5 class="fw-bold mb-3">¿Por Qué Elegirnos?</h5>
+				<p class="text-muted mb-2">
+					Ofrecemos productos hechos a mano con ingredientes frescos y de
+					alta calidad, como pasteles, tartas, galletas y cupcakes.
+				</p>
+				<p class="text-muted mb-2">
+					Nos destacamos por nuestra innovación constante, creando sabores
+					únicos y estilos modernos. Además, brindamos experiencias
+					personalizadas para satisfacer tus gustos y necesidades.
+				</p>
+				<p class="text-muted mb-2">
+					Nuestro compromiso con la satisfacción del cliente garantiza un
+					servicio amable y profesional en cada interacción.
+				</p>
+				<p class="text-muted mb-3">
+					Elige Repostería Delicias S.A.C. para postres artesanales de
+					calidad, diseñados para hacer de tus momentos especiales recuerdos
+					inolvidables.
+				</p>
+				<a href="infoweb" class="btn btn-danger">Leer Más</a> 
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<!--Contenedor de los iconos-->
+		<section class="py-5 bg-light">
+			<div class="container">
+			<div class="row g-4 justify-content-center">
+				<!-- Ícono 1 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="d-flex align-items-center p-3 bg-white border rounded shadow-sm h-100">
+					<img src="/src/images/icon-1.jpg" alt="Delivery Gratis" class="me-3" style="height: 50px" />
+					<div>
+					<h6 class="mb-1 text-capitalize fw-semibold">
+						Delivery Gratis
+					</h6>
+					<small class="text-muted text-capitalize">Todas las órdenes</small>
+					</div>
+				</div>
+				</div>
+
+				<!-- Ícono 2 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="d-flex align-items-center p-3 bg-white border rounded shadow-sm h-100">
+					<img src="/src/images/icon-2.jpg" alt="Devoluciones" class="me-3" style="height: 50px" />
+					<div>
+					<h6 class="mb-1 text-capitalize fw-semibold">Devoluciones</h6>
+					<small class="text-muted text-capitalize">Garantía de devolución del dinero</small>
+					</div>
+				</div>
+				</div>
+
+				<!-- Ícono 3 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="d-flex align-items-center p-3 bg-white border rounded shadow-sm h-100">
+					<img src="/src/images/icon-3.jpg" alt="Oferta y Regalo" class="me-3" style="height: 50px" />
+					<div>
+					<h6 class="mb-1 text-capitalize fw-semibold">
+						Oferta y Regalo
+					</h6>
+					<small class="text-muted text-capitalize">En todos los pedidos</small>
+					</div>
+				</div>
+				</div>
+
+				<!-- Ícono 4 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="d-flex align-items-center p-3 bg-white border rounded shadow-sm h-100">
+					<img src="/src/images/icon-4.jpg" alt="Pago Seguro" class="me-3" style="height: 50px" />
+					<div>
+					<h6 class="mb-1 text-capitalize fw-semibold">Pago Seguro</h6>
+					<small class="text-muted text-capitalize">Su seguridad es primero</small>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<!--Sección de productos-->
+		<section class="productos py-5" id="productos">
+			<div class="container">
+			<h1 class="seccion-titulo text-center mb-5 heading bg-opacity-10 bg-danger text-center py-2">
+				Lista de <span class="highlight">productos</span>
+			</h1>
+
+			<div class="row g-4">
+				<!-- Producto 1 -->
+				<!--imagen-->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-10%</span>
+					<img src="/src/images/img-1.jpg" class="card-img-top" alt="leche asada" />
+					<!--texto-->
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Leche Asada</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/18.00</strong>
+						<span class="text-muted text-decoration-line-through">S/20.00</span>
+					</p>
+					<!--botones-->
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="leche asada" data-price="18.00">Añadir al
+						carrito</a>
+						<a href="V-LecheAsada" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-15%</span>
+					<img src="/src/images/img-2.jpg" class="card-img-top" alt="brownies" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Brownies</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/17.00</strong>
+						<span class="text-muted text-decoration-line-through">S/20.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="brownies" data-price="17.00">Añadir
+						al carrito</a>
+						<a href="V-Brownies" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 3 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-5%</span>
+					<img src="/src/images/img-3.jpg" class="card-img-top" alt="cupcake" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Cupcake</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/9.50</strong>
+						<span class="text-muted text-decoration-line-through">S/10.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="cupcake" data-price="9.50">Añadir al
+						carrito</a>
+						<a href="/V-Cupcakes" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 4 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-20%</span>
+					<img src="/src/images/img-4.jpg" class="card-img-top" alt="donas" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Donas</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/12.00</strong>
+						<span class="text-muted text-decoration-line-through">S/15.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="donas" data-price="12.00">Añadir al
+						carrito</a>
+						<a href="/V-Donas" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 5 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-17%</span>
+					<img src="/src/images/img-5.jpg" class="card-img-top" alt="galletaMantequilla" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">
+						Galletas de Mantequilla
+					</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/9.00</strong>
+						<span class="text-muted text-decoration-line-through">S/12.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="galletaMantequilla" data-price="9.00">Añadir al
+						carrito</a>
+						<a href="/V-GalletasMantequilla" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 6 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-3%</span>
+					<img src="/src/images/img-6.jpg" class="card-img-top" alt="muffins" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Muffins</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/7.00</strong>
+						<span class="text-muted text-decoration-line-through">S/8.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="muffins" data-price="7.00">Añadir al
+						carrito</a>
+						<a href="/V-Muffins" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 7 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-18%</span>
+					<img src="/src/images/img-7.jpg" class="card-img-top" alt="pastelChocolate" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Pastel De Chocolate</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/20.50</strong>
+						<span class="text-muted text-decoration-line-through">S/25.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="pastelChocolate" data-price="20.50">Añadir al
+						carrito</a>
+						<a href="/V-PastelChocolate" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Producto 8 -->
+				<div class="col-md-6 col-lg-3">
+				<div class="card position-relative h-100">
+					<span class="badge position-absolute top-0 start-0 m-2 bg-dark">-10%</span>
+					<img src="/src/images/img-8.jpg" class="card-img-top" alt="pastelFrutas" />
+					<div class="card-body d-flex flex-column">
+					<h5 class="card-title text-capitalize">Pastel De Frutas</h5>
+					<p class="card-text mb-2">
+						<strong class="text-success">S/16.20</strong>
+						<span class="text-muted text-decoration-line-through">S/18.00</span>
+					</p>
+					<div class="mt-auto d-flex flex-column gap-2">
+						<a href="#" class="btn cart-btn btn-danger" data-name="pastelFrutas" data-price="16.20">Añadir al
+						carrito</a>
+						<a href="/V-PastelFrutas" class="btn btn-outline-secondary">Ver Info</a>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<!-- Sección de Opiniones de Clientes -->
+		<section class="testimonios-section py-5" id="reseñas">
+			<div class="container">
+			<!--titulo-->
+			<div class="text-center mb-5">
+				<h2 class="seccion-titulo">
+				Opinión Del <span class="highlight">Cliente</span>
+				</h2>
+			</div>
+
+			<div class="row g-4">
+				<!-- Testimonio 1 -->
+				<div class="col-md-4">
+				<div class="testimonial-card h-100">
+					<p>
+					Desde que descubrí Repostería Delicias S.A.C., no puedo dejar de
+					recomendarla. Los pasteles y tartas son deliciosos, siempre
+					frescos y con una presentación impecable. Para el cumpleaños de
+					mi hija, les pedí un pastel personalizado, ¡y el resultado
+					superó mis expectativas! Además, el equipo fue muy amable y
+					atento a mis requerimientos. Definitivamente, volveré a pedirles
+					para futuros eventos.
+					</p>
+
+					<div class="d-flex align-items-center mt-4">
+					<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="avatar"
+						class="testimonial-avatar me-3" />
+					<div>
+						<p class="testimonial-name">María Sánchez</p>
+						<p class="testimonial-role">Cliente Feliz</p>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Testimonio 2 -->
+				<div class="col-md-4">
+				<div class="testimonial-card h-100">
+					<p>
+					Hice un pedido grande de cupcakes para una fiesta de la oficina,
+					y todos quedaron encantados. Los sabores eran sorprendentes y la
+					decoración fue perfecta para la ocasión. Lo que más me gustó fue
+					el trato personalizado y la rapidez con la que me atendieron.
+					Sin duda, Repostería Delicias S.A.C. se ha ganado un cliente
+					leal.
+					</p>
+					<div class="d-flex align-items-center mt-4">
+					<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" class="testimonial-avatar me-3" />
+					<div>
+						<p class="testimonial-name">Juan Pérez</p>
+						<p class="testimonial-role">Cliente Feliz</p>
+					</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Testimonio 3 -->
+				<div class="col-md-4">
+				<div class="testimonial-card h-100">
+					<p>
+					Siempre que tengo un evento especial, acudo a Repostería
+					Delicias S.A.C. por su increíble calidad y servicio. Pedí un
+					pastel para el aniversario de mis padres y fue todo un éxito. El
+					equipo fue muy atento y se aseguró de que todo saliera como lo
+					había planeado. La presentación y el sabor del pastel fueron
+					impecables.
+					</p>
+					<div class="d-flex align-items-center mt-4">
+					<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="avatar" class="testimonial-avatar me-3" />
+					<div>
+						<p class="testimonial-name">Javier Rojas</p>
+						<p class="testimonial-role">Cliente Feliz</p>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<!--Seccion de contactarte con nosotros-->
+		<section id="contactanos" class="contact-section py-5">
+			<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="seccion-titulo">
+				Contacte Con <span class="highlight">Nosotros</span>
+				</h2>
+			</div>
+
+			<div class="row align-items-center">
+				<!-- Formulario -->
+				<div class="col-md-6 mb-4 mb-md-0">
+				<div class="p-4 rounded-3 shadow-sm bg-white">
+					<form id="contactForm">
+					<div class="mb-3">
+						<input type="text" class="form-control" name="nombre" placeholder="nombre" required />
+					</div>
+					<div class="mb-3">
+						<input type="email" class="form-control" name="email" placeholder="email" required />
+					</div>
+					<div class="mb-3">
+						<input type="tel" class="form-control" name="numero" placeholder="numero" required />
+					</div>
+					<div class="mb-3">
+						<textarea class="form-control" name="mensaje" rows="4" placeholder="mensaje" required></textarea>
+					</div>
+					<button type="submit" class="btn btn-dark">Enviar Mensaje</button>
+					</form>
+
+				</div>
+				</div>
+
+				<!-- Imagen -->
+				<div class="col-md-6 text-center">
+				<img src="/src/images/contact-img.jpg" alt="Ilustración contacto" class="img-fluid" style="max-height: 350px" />
+				</div>
+			</div>
+			</div>
+		</section>
+
+  <!--Footer-->
+	<Footer />
+	
+
+
+
+	<!--js Bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+		crossorigin="anonymous"></script>
+	<!--js personalizado-->
+	<script src="../js/form-validation.js"></script>
+	<script src="../js/cart.js"></script>
+	</body>
+</html>

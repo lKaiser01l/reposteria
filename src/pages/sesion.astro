@@ -1,0 +1,144 @@
+---
+import Nav from '../components/nav.astro';
+---
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro e Inicio de Sesión</title>
+    <link rel="stylesheet" href="/src/styles/estilos.css">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <!--boostrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+            margin-top: 4px;
+        }
+        .field-error {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+<!-- REGISTRO -->
+    <div class="container-form register">
+        <div class="informacion">
+            <div class="info-sesion">
+                <h2>Bienvenido</h2>
+                <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+                <br>
+                <a href="/">
+                    <p/>
+                    <input type="button" value="Regresar" id="sign-in">
+                </a>
+                
+            </div>
+        </div>
+        <div class="form-informacion">
+            <div class="form-information-sesion">
+                <h2>Crear una Cuenta</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <p>o usa tu email para registrarte</p>
+
+                <!-- Formulario con binding -->
+                <form class="form form-register" th:action="@{/registro}" method="post"
+                    th:object="${cliente}" th:if="${cliente != null}">
+                    <div>
+                        <label>
+                            <i class='bx bx-user'></i>
+                            <input type="text" placeholder="Nombre Usuario"
+                                th:field="*{usuario}"
+                                th:classappend="${#fields.hasErrors('usuario')} ? 'field-error' : ''">
+                        </label>
+                        <div th:if="${#fields.hasErrors('usuario')}" th:errors="*{usuario}" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Correo Electrónico"
+                                th:field="*{correo}"
+                                th:classappend="${#fields.hasErrors('correo')} ? 'field-error' : ''">
+                        </label>
+                        <div th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña"
+                                th:field="*{contrasena}"
+                                th:classappend="${#fields.hasErrors('contrasena')} ? 'field-error' : ''">
+                        </label>
+                        <div th:if="${#fields.hasErrors('contrasena')}" th:errors="*{contrasena}" class="error-message"></div>
+                    </div>
+                    <div th:if="${error}" class="error-message" th:text="${error}"></div>
+                    <input type="submit" value="Registrarte">
+                </form>
+
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="container-form login hide">
+        <div class="informacion">
+            <div class="info-sesion">
+                <h2>Bienvenido</h2>
+                <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                <input type="button" value="Registrarse" id="sign-up">
+                <a href="/">
+                    <p/>
+                    <input type="button" value="Regresar" id="sign-in">
+                </a>
+            </div>
+        </div>
+        <div class="form-informacion">
+            <div class="form-information-login">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                </div>
+                <p>o iniciar sesión con una cuenta</p>
+
+                <!-- Login integrado con Spring Security -->
+                <form class="form form-login" th:action="@{/login}" method="post">
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" name="contrasena" placeholder="Contraseña" required>
+                        </label>
+                    </div>
+
+                    <!-- Mostrar error de Spring Security -->
+                    <div th:if="${param.error}" class="error-message">
+                        Correo o contraseña incorrectos.
+                    </div>
+                    <div th:if="${param.logout}" class="error-message" style="color: green;">
+                        Has cerrado sesión correctamente.
+                    </div>
+
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/js/sesion.js"></script>
+</body>
+</html>

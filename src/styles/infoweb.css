@@ -1,0 +1,394 @@
+
+/*Nav*/
+
+.navbar {
+    background-color: #fdeaae; /* Cambia el color de fondo a morado ffeaa6;  */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    margin-left: 16px;
+    margin-right: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #666;
+    
+    
+}
+/* MOdificando  */
+
+.collapse  .sm-icons {
+    
+    flex-direction: row;
+    padding-left: 18px; /* cuando este en responsive se ponga pára la isquierda */
+    gap: 4px; /* Espaciado entre los íconos */
+    
+
+}
+.sm-icons .nav-link{
+    padding-right: 1em;
+    display: flex; /* Asegura que el contenido esté alineado */
+    
+    
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #e84393;
+}
+
+.navbar {
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Alinea la barra al lado izquierdo */
+    width: 100%; /* Hace que la barra ocupe todo el ancho */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.dropdown-menu {
+    background-color: #fdeaae;
+    border: 1px solid #f3d98c;
+}
+.dropdown-menu .dropdown-item .icono-logout {
+  font-size: 1.4em; /* Puedes ajustar el tamaño, por ejemplo 2em si lo quieres más grande */
+  vertical-align: middle;
+}
+/* Opcional: cambia el color de los items para que combinen */
+.dropdown-menu .dropdown-item {
+    color:#666;
+    font-size: 1.0rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
+    margin: 4px 8px;
+    padding: 3px 12px;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    
+    color: #e84393;
+}
+
+@media only screen and (max-width: 991.11px) {
+  
+  .dropdown-menu {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+    min-width: 0;
+    width: auto;
+    padding: 0;
+  }
+  .dropdown-menu .dropdown-item {
+    
+    font-size: 1.0rem;
+    padding: 5px 12px;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    color: #353434;
+    margin: 6px 0;
+    box-sizing: border-box;
+    display: block;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+  }
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    border: 2px solid #e84393;
+    background-color: rgba(232, 67, 147, 0.1);
+    color: #e84393;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+}
+
+@media only screen and (max-width: 1277px) {
+    .navbar .navbar-brand {
+      margin-left: 6px; /* Ajuste solo en pantallas pequeñas */
+    }
+  }
+
+  @media only screen and (max-width: 991.11px) {
+    .navbar .navbar-nav .nav-link  {
+    margin-top: 5px;
+    margin-bottom: 5px; /* Ajuste solo en pantallas pequeñas */
+    font-size: 1.2rem;
+    padding: 8px 12px; /* Espaciado interno para que el borde no quede pegado al texto */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Borde alrededor del enlace */
+    border-radius: 8px; 
+    text-align: center;
+    background: rgb(255, 255, 255);
+    
+    }
+  }
+  @media only screen and (max-width: 991.11px) {
+    .navbar .navbar-nav .nav-link:hover,
+    .sm-icons .nav-link:hover {
+      border: 2px solid #e84393; /* Color del borde al pasar el mouse */
+      
+      background-color: rgba(232, 67, 147, 0.1); /* Fondo ligeramente transparente */
+      
+    }
+  }
+  
+  @media only screen and (max-width: 991.11px) { 
+    .navbar .navbar-nav .nav-item .nav-link {
+      color: #353434; /* Cambia el color de la letra en responsive */
+    }
+
+    .navbar .navbar-nav .nav-link:hover,
+    .sm-icons .nav-link:hover {
+    color: #ff4081; /* Cambia el color de la letra al pasar el mouse */
+    }
+
+    .navbar .navbar-nav .nav-link:hover i {
+        color: #ff4081; /* Cambia el color de los íconos al pasar el mouse */
+      }
+
+
+   }
+   /* ultimo cambio */
+
+   @media (max-width: 1198px) {
+  .navbar .navbar-nav .nav-link {
+    font-size: 1rem !important; /* o el tamaño que prefieras */
+    
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 1198px) {
+  .navbar .navbar-nav .nav-link,
+  .navbar .navbar-nav .nav-item .nav-link {
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+  }
+}
+
+/*body*/
+/*body*/
+
+:root {
+    --pink: #e84393;
+}
+
+section {
+    padding: 20px 90px;
+}
+
+.heading {  
+    text-align: center;
+    font-size: 30px; /* antes 40px */
+    color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50px;
+    background: #333;
+    color: #fff;
+    padding: 9px 35px;
+    cursor: pointer;
+    font-size: 16px; /* antes 17px */
+}
+
+.btn:hover {
+    background: var(--pink);
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+    padding-top: 40px; 
+}
+
+.info-section .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 900px;
+    margin: 15px;
+}
+
+.info-section .info-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.info-section .info-img {
+    flex: 1;
+    text-align: center;
+}
+
+.info-section .info-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 300px; /* 300px */
+}
+
+.info-section .info-text h2 {
+    font-size: 24px; /* antes 35px */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-section .info-text p {
+    font-size: 16px; /* antes 18px */
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+/*footer*/
+.footer .creditos {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2.5rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .creditos span {
+    color: var(--pink);
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    
+
+    .info-section .content {
+        flex-direction: column;
+    }
+
+    .info-section .info-text,
+    .info-section .info-img {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .info-section .content {
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+}
+
+
+/*Pie de Pagina*/
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 1.4rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.4rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+
+.footer .creditos{
+    text-align: center;
+    padding:1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 1.4rem;
+    color: #333;
+    border-top: .1rem solid rgba(0,0,0,.1);
+}
+
+.footer .creditos span{
+    color: var(--pink);
+}
+
+.error {
+    border: 2px solid red; 
+}
+
+.error-message {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+

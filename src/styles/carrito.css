@@ -1,0 +1,297 @@
+/* Encabezados (TITULOS)*/
+  .heading {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .heading span {
+    color: #a52a2a;
+  }
+
+
+/*Nav*/
+
+.navbar {
+    background-color: #fdeaae; /* Cambia el color de fondo a morado ffeaa6;  */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    margin-left: 16px;
+    margin-right: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #666;
+    
+    
+}
+/* MOdificando  */
+
+.collapse  .sm-icons {
+    
+    flex-direction: row;
+    padding-left: 18px; /* cuando este en responsive se ponga pára la isquierda */
+    gap: 4px; /* Espaciado entre los íconos */
+    
+
+}
+.sm-icons .nav-link{
+    padding-right: 1em;
+    display: flex; /* Asegura que el contenido esté alineado */
+    
+    
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #e84393;
+}
+
+.navbar {
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Alinea la barra al lado izquierdo */
+    width: 100%; /* Hace que la barra ocupe todo el ancho */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.dropdown-menu {
+    background-color: #fdeaae;
+    border: 1px solid #f3d98c;
+}
+.dropdown-menu .dropdown-item .icono-logout {
+  font-size: 1.4em; /* Puedes ajustar el tamaño, por ejemplo 2em si lo quieres más grande */
+  vertical-align: middle;
+}
+/* Opcional: cambia el color de los items para que combinen */
+.dropdown-menu .dropdown-item {
+    color:#666;
+    font-size: 1.0rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
+    margin: 4px 8px;
+    padding: 3px 12px;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    
+    color: #e84393;
+}
+
+@media only screen and (max-width: 991.11px) {
+  
+  .dropdown-menu {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+    min-width: 0;
+    width: auto;
+    padding: 0;
+  }
+  .dropdown-menu .dropdown-item {
+    
+    font-size: 1.0rem;
+    padding: 5px 12px;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    color: #353434;
+    margin: 6px 0;
+    box-sizing: border-box;
+    display: block;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+  }
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus {
+    border: 2px solid #e84393;
+    background-color: rgba(232, 67, 147, 0.1);
+    color: #e84393;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+}
+
+@media only screen and (max-width: 1277px) {
+    .navbar .navbar-brand {
+      margin-left: 6px; /* Ajuste solo en pantallas pequeñas */
+    }
+  }
+
+  @media only screen and (max-width: 991.11px) {
+    .navbar .navbar-nav .nav-link  {
+    margin-top: 5px;
+    margin-bottom: 5px; /* Ajuste solo en pantallas pequeñas */
+    font-size: 1.2rem;
+    padding: 8px 12px; /* Espaciado interno para que el borde no quede pegado al texto */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Borde alrededor del enlace */
+    border-radius: 8px; 
+    text-align: center;
+    background: rgb(255, 255, 255);
+    
+    }
+  }
+  @media only screen and (max-width: 991.11px) {
+    .navbar .navbar-nav .nav-link:hover,
+    .sm-icons .nav-link:hover {
+      border: 2px solid #e84393; /* Color del borde al pasar el mouse */
+      
+      background-color: rgba(232, 67, 147, 0.1); /* Fondo ligeramente transparente */
+      
+    }
+  }
+  
+  @media only screen and (max-width: 991.11px) { 
+    .navbar .navbar-nav .nav-item .nav-link {
+      color: #353434; /* Cambia el color de la letra en responsive */
+    }
+
+    .navbar .navbar-nav .nav-link:hover,
+    .sm-icons .nav-link:hover {
+    color: #ff4081; /* Cambia el color de la letra al pasar el mouse */
+    }
+
+    .navbar .navbar-nav .nav-link:hover i {
+        color: #ff4081; /* Cambia el color de los íconos al pasar el mouse */
+      }
+
+
+   }
+   /* ultimo cambio */
+
+   @media (max-width: 1198px) {
+  .navbar .navbar-nav .nav-link {
+    font-size: 1rem !important; /* o el tamaño que prefieras */
+    
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 1198px) {
+  .navbar .navbar-nav .nav-link,
+  .navbar .navbar-nav .nav-item .nav-link {
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+  }
+}
+
+   
+/*titulos*/
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 45px;
+    color: #333;
+    padding: 1rem;
+    margin: 10px 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.heading span {
+    color: #a52a2a;
+}
+
+
+/* ===== Carrito ===== */
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.cart-items {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-item h4 {
+    margin: 0;
+    flex: 1;
+    font-size: 20px;
+}
+
+.cart-item span {
+    flex: 1;
+    text-align: right;
+}
+
+.cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item button {
+    background-color: #e84393;
+    color: #fff;
+    border: none;
+    margin-left: 4px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #d73585;
+}
+
+.cart-total {
+    text-align: center;
+    
+}
+.confirm-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background-color: #218838;
+}
+
+:root {
+    --pink: #e84393;
+}
+
+
+section {
+    padding: 2rem 9%;
+}
+
+
