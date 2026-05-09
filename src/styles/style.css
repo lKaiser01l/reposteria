@@ -200,10 +200,12 @@
   overflow: hidden;
 }
 
+.hero-carousel .carousel,
 .hero-carousel .carousel-inner,
 .hero-carousel .carousel-item,
 .hero-carousel .carousel-item img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   filter: brightness(0.9);
 }
@@ -216,11 +218,10 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 2;
-  padding: 2rem;
-  text-align: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 /* Texto del carrusel */
@@ -237,59 +238,45 @@
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Estilos de fuentes adaptables con clamp() */
-.carousel-text h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+/* Estilos de fuentes adaptables con clamp() superponiéndose a Bootstrap */
+.carousel-text h1.display-1 {
+  font-size: clamp(2.5rem, 8vw, 5rem) !important;
   line-height: 1.1;
   font-weight: bold;
 }
 
-.carousel-text h2 {
-  font-size: clamp(1.2rem, 3.5vw, 2rem);
+.carousel-text h2.fs-2 {
+  font-size: clamp(1.2rem, 4vw, 2rem) !important;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
-.carousel-text p {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+.carousel-text p.fs-5 {
+  font-size: clamp(1rem, 2.5vw, 1.3rem) !important;
   line-height: 1.5;
   padding: 0 1rem;
 }
 
 /* Botón adaptable */
 .carousel-text .btn {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   padding: 0.7rem 1.8rem;
   margin-top: 1.5rem;
   display: inline-block;
   text-align: center;
 }
 
-/* Ajustes para pantallas medianas */
-@media (max-width: 768px) {
-  .hero-carousel {
-    height: 70vh;
-  }
-  .carousel-overlay {
-    padding: 1.5rem;
-  }
-}
-
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 576px) {
   .hero-carousel {
-    height: 60vh;
-  }
-
-  .carousel-overlay {
-    padding: 1rem;
+    height: 70vh;
   }
 
   .carousel-text {
     padding: 1rem;
   }
 
-  /* Ocultar solo el párrafo en móviles */
+  /* Ocultar solo el párrafo y el h2 en móviles */
   .carousel-text h2,
   .carousel-text p {
     display: none;
