@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import producto_8 from '../assets/img-8.jpg';
 ---
 
 <!DOCTYPE html>
@@ -74,11 +75,7 @@
         >
           <!-- Imagen -->
           <div class="col-md-6">
-            <img
-              src="/src/images/img-8.jpg"
-              alt="Pastel de Frutas"
-              class="img-fluid producto-img"
-            />
+            <Image src={producto_8} alt="Pastel de Frutas" class="img-fluid producto-img" height={450} />
           </div>
 
           <!-- Información -->

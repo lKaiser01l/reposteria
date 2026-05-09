@@ -1,6 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import producto_7 from '../assets/img-7.jpg';
+---
+
 
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,11 +76,7 @@
         >
           <!-- Imagen -->
           <div class="col-md-6">
-            <img
-              src="/src/images/img-7.jpg"
-              alt="Pastel de Chocolate"
-              class="img-fluid producto-img"
-            />
+            <Image src={producto_7} alt="Pastel de Chocolate" class="img-fluid producto-img" height={450} />
           </div>
 
           <!-- Información -->

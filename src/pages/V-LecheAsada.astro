@@ -1,5 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import producto_1 from '../assets/img-1.jpg';
+---
+
+
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,8 +72,8 @@
         <div class="col-lg-10 info-box d-flex flex-column flex-md-row gap-4 align-items-center">
           <!-- Imagen -->
           <div class="col-md-6">
-            <img src="/src/images/img-1.jpg" alt="Leche Asada" class="img-fluid producto-img"/>
-            </div>
+            <Image src={producto_1} alt="Leche Asada" class="img-fluid producto-img" height={350} />
+          </div>
 
           <!-- Información -->
           <div class="col-md-6">

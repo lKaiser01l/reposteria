@@ -1,5 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import producto_5 from '../assets/img-5.jpg';
+
+---
+
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +30,7 @@
         padding: 20px;
       }
 
-      .producto-img {
+      .Image {
         border-radius: 10px;
         max-height: 450px;
         width: 100%;
@@ -70,11 +76,8 @@
         >
           <!-- Imagen -->
           <div class="col-md-6">
-            <img
-              src="/src/images/img-5.jpg"
-              alt="Galletas de mantequilla"
-              class="img-fluid producto-img"
-            />
+            <Image src={producto_5} alt="Galletas de mantequilla" class="img-fluid producto-img" height={400} />
+              
           </div>
 
           <!-- Información -->
