@@ -1,11 +1,14 @@
-
+---
+import { Image } from 'astro:assets';
+import Logo from '../assets/delicias3.png';
+---
 
 
 
 <nav class="navbar navbar-expand-lg navbar-custom" >
 
   <div class="container">
-    <a class="navbar-brand" href="/"><img src="/src/images/delicias3.png" alt="Logo" width="115" height="50" /></a>
+    <a class="navbar-brand" href="/"><Image src={Logo} alt="Logo" width="115" height="50" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
