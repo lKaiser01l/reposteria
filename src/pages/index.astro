@@ -5,6 +5,7 @@ import Nav from '../components/nav.astro'
 import Footer from '../components/footer.astro'
 
 import { Image } from 'astro:assets';
+
 import Contacto from '../assets/contact-img.jpg';
 import producto_1 from '../assets/img-1.jpg';
 import producto_2 from '../assets/img-2.jpg';
@@ -476,7 +477,9 @@ import producto_5 from '../assets/img-5.jpg';
 
 				<!-- Imagen -->
 				<div class="col-md-6 text-center">
-				<img src="/src/assets/contact-img.jpg" alt="Ilustración contacto" class="img-fluid" style="max-height: 350px" />
+				<img src="../src/assets/contact-img.jpg" alt="Ilustración contacto" class="img-fluid" style="max-height: 350px" />
+
+				<Image src={Contacto} alt="Ilustración contacto" class="img-fluid" style="max-height: 350px" />
 				</div>
 			</div>
 			</div>
